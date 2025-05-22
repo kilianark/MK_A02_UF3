@@ -1,5 +1,40 @@
 # MK_A02_UF3
 
+Endpoint findAll:
+![image](https://github.com/user-attachments/assets/be90db5c-1fa3-4f23-a59d-d4d3bb7ebd9b)
+
+Ens retorna tots els students guardats a la nostra base de MongoDB.
+
+Endpoint GetById:
+![image](https://github.com/user-attachments/assets/5ac0f6c2-fe13-4b40-a430-bb6adad5e2f6)
+
+Ens retorna el student per la seva id.
+
+Endpoint LastName
+![image](https://github.com/user-attachments/assets/a1eb99f0-84bb-4b60-b742-48b4223de7b2)
+
+Ens retorna tots els students que contingui el que li passem al endpoint al path.
+
+Endpoint Update:
+![image](https://github.com/user-attachments/assets/fa5ce522-20e7-42ed-8231-66f6559bcde0)
+![image](https://github.com/user-attachments/assets/b158a5e6-f0e9-4781-9bde-8dc2d9d8d391)
+![image](https://github.com/user-attachments/assets/fe5f30b2-913c-4e42-98a9-117d56f57304)
+
+Actualitza un student existent amb les dades que li pasem.
+
+Endpoint Save:
+![image](https://github.com/user-attachments/assets/11ba0238-d175-4c9f-9c74-d03f7a4b83b0)
+![image](https://github.com/user-attachments/assets/6bf8e24a-aec9-4bbb-828a-c90b60307e94)
+
+Crea el usuari amb les dades que li hem passat.
+
+Endpoint Delete:
+
+![image](https://github.com/user-attachments/assets/593eb37a-c226-4915-b8bc-3627e859f4f5)
+![image](https://github.com/user-attachments/assets/f9376d2c-7485-442d-ad7a-1e096c807f8f)
+
+Borra el usuari amb la ID
+
 ## Millores i preguntes de reflexió
 
 1. **Afegiu un endpoint que cerqui per un camp de tipus String on feu servir regex.**
