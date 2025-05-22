@@ -12,5 +12,6 @@ public interface StudentServei {
     Flux<Student> findAll();
     Mono<Student> update(StudentDTO studentDTO);
     Mono<Void> delete(String id);
+    Flux<Student> findByLastnameMatchingRegex(String regex);
 
 }

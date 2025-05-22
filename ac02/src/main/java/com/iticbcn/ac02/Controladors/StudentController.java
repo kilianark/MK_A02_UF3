@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.iticbcn.ac02.DTO.StudentDTO;
@@ -43,6 +42,11 @@ public class StudentController {
     @GetMapping("/all")
     public Flux<Student> findAll() {
         return studentServei.findAll();
+    }
+
+    @GetMapping("/lastname/{regex}")
+    public Flux<Student> findByLastnameMatchingRegex(@PathVariable String regex) {
+        return studentServei.findByLastnameMatchingRegex(regex);
     }
 
     @PutMapping("/update")

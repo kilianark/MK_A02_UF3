@@ -40,12 +40,17 @@ public class StudentServeiImpl implements StudentServei {
     @Override
     public Mono<Student> update(StudentDTO studentDTO) {
         return studentRepo.findById(studentDTO.id())
-            .map(std -> studentMapper.StudentDTOToStudent(studentDTO)).flatMap(studentRepo::save);
+            .map(std -> studentMapper.StudentDTOToStudent(studentDTO)).flatMap(this.studentRepo::save);
     }
 
     @Override
     public Mono<Void> delete(String id) {
         return studentRepo.deleteById(id);
+    }
+
+    @Override
+    public Flux<Student> findByLastnameMatchingRegex(String regex) {
+        return studentRepo.findByLastnameMatchingRegex(regex);
     }
     
 }

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-05-21T12:34:36+0200",
+    date = "2025-05-22T17:15:13+0200",
     comments = "version: 1.6.3, compiler: Eclipse JDT (IDE) 3.42.0.v20250514-1000, environment: Java 21.0.7 (Eclipse Adoptium)"
 )
 @Component
@@ -21,25 +21,25 @@ public class StudentMapperImpl implements StudentMapper {
             return null;
         }
 
-        String lastname1 = null;
         String id = null;
         String name = null;
+        String lastname1 = null;
         String lastname2 = null;
         String gender = null;
         String email = null;
         String phone = null;
         int birth_year = 0;
 
-        lastname1 = student.getLastname1();
         id = student.getId();
         name = student.getName();
+        lastname1 = student.getLastname1();
         lastname2 = student.getLastname2();
         gender = student.getGender();
         email = student.getEmail();
         phone = student.getPhone();
         birth_year = student.getBirth_year();
 
-        StudentDTO studentDTO = new StudentDTO( lastname1, id, name, lastname2, gender, email, phone, birth_year );
+        StudentDTO studentDTO = new StudentDTO( id, name, lastname1, lastname2, gender, email, phone, birth_year );
 
         return studentDTO;
     }
