@@ -40,7 +40,11 @@ public class StudentServeiImpl implements StudentServei {
     @Override
     public Mono<Student> update(StudentDTO studentDTO) {
         return studentRepo.findById(studentDTO.id())
-            .map(std -> studentMapper.StudentDTOToStudent(studentDTO)).flatMap(this.studentRepo::save);
+            .flatMap(std -> {
+                Student updt = studentMapper.StudentDTOToStudent(studentDTO);
+                updt.setId(std.getId());
+                return studentRepo.save(updt);
+            });
     }
 
     @Override
