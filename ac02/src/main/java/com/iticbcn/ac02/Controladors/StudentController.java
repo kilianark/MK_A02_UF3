@@ -8,12 +8,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import com.iticbcn.ac02.DTO.StudentDTO;
 import com.iticbcn.ac02.Models.Student;
 import com.iticbcn.ac02.Serveis.StudentServeiImpl;
 
-import io.swagger.v3.oas.annotations.parameters.RequestBody;
+
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
